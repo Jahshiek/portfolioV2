@@ -47,7 +47,7 @@ const Portfolio = () => {
                       id: 2,
                       title: "GeoGenius",
                       description: "Environmental monitoring platform that uses real-time air quality data and a user-friendly interface, enabling informed decisions to improve health and well-being.",
-                      image: "/src/assets/geo-genius.png",
+                      image: "./src/assets/geo-genius.png",
                       tags: ["Javascript", "Google Maps API", "HTML", "CSS"],
                       category: "backend",
                       links: {

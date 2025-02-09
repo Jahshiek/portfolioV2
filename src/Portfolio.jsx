@@ -48,7 +48,7 @@ const Portfolio = () => {
       id: 1,
       title: "Second Wind",
       description: "An online community-based platform, that provides resources, support, and employment opportunities for individuals impacted by the criminal justice system.",
-      image: "./src/assets/second-wind.png",
+      image: "/assets/second-wind.png",
       tags: ["React", "Node.js", "Express", "WebSocket"],
       category: "Full-Stack",
       links: {
@@ -59,7 +59,7 @@ const Portfolio = () => {
       id: 2,
       title: "GeoGenius",
       description: "Environmental monitoring platform that uses real-time air quality data and a user-friendly interface, enabling informed decisions to improve health and well-being.",
-      image: "./src/assets/geo-genius.png",
+      image: "/assets/geo-genius.png",
       tags: ["Javascript", "Google Maps API", "HTML", "CSS"],
       category: "backend",
       links: {
@@ -71,7 +71,7 @@ const Portfolio = () => {
       id: 3,
       title: "Fight-For-Ethan",
       description: "A Mortal Kombat clone created using HTML, CSS, and Vanilla JavaScript.",
-      image: "./src/assets/fight.png",
+      image: "/assets/fight.png",
       tags: ["JavaScript", "Canvas", "DOM-Manipulation", "HTML", "CSS"],
       category: "gamedev",
       links: {
@@ -83,7 +83,7 @@ const Portfolio = () => {
       id: 4,
       title: "Lonely-Together",
       description: "Social platform with interest-based matching and virtual events.",
-      image: "./src/assets/lonely-together.jpg",
+      image: "/assets/lonely-together.jpg",
       tags: ["Next.js", "TypeScript", "Prisma", "Redux", "Supabase", "Aws S3"],
       category: "Full-Stack",
       links: {
@@ -94,7 +94,7 @@ const Portfolio = () => {
       id: 5,
       title: "Gov-Watchers",
       description: "An in-depth analysis that examines the cost of living and purchasing power in relation to inflation, the Consumer Price Index (CPI), and the valuation of the U.S. dollar, all set against the backdrop of median household income and minimum wage.",
-      image: "./src/assets/gov-watchers.jpg",
+      image: "/assets/gov-watchers.jpg",
       tags: ["Fivetran", "Excel", "SnowFlake", "SQL", "Dbt"],
       category: "backend",
       links: {
@@ -105,7 +105,7 @@ const Portfolio = () => {
       id: 6,
       title: "Packet-Patrol",
       description: "A functional IDS built to expand my skill set in cybersecurity, Python, and full-stack development.",
-      image: "./src/assets/ids2.jpg",
+      image: "/assets/ids2.jpg",
       tags: ["Python", "Scapy", "Pandas", "Numpy", "Matplotlib", "Seaborn"],
       category: "cyber",
       links: {

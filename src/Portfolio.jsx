@@ -260,6 +260,8 @@ const Portfolio = () => {
       <SkillsSection />
       <ExperienceGrid />
 
+      <hr/>
+
       {/* Contact Section */}
       <section id="contact" className={`${darkMode ? 'bg-gray-800' : 'bg-gray-100'} py-20 px-4`}>
         <ContactSection darkMode={darkMode} />

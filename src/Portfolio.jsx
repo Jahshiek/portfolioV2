@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import ExperienceGrid from './Components/ExperienceGrid';
 import SkillsSection from './Components/SkillsSection';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -109,8 +109,7 @@ const Portfolio = () => {
       tags: ["Python", "Scapy", "Pandas", "Numpy", "Matplotlib", "Seaborn"],
       category: "cyber",
       links: {
-        github: "#",
-        live: "#",
+        github: "https://github.com/Jahshiek/Packet-Patrol"
       }
     }
   ];

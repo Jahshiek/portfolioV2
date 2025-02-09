@@ -103,7 +103,7 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: "Packet-Patrol",
+      title: "Packet-Patrol (On Hold)",
       description: "A functional IDS built to expand my skill set in cybersecurity, Python, and full-stack development.",
       image: "/assets/ids2.jpg",
       tags: ["Python", "Scapy", "Pandas", "Numpy", "Matplotlib", "Seaborn"],

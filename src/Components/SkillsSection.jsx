@@ -1,24 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Database, BarChart3 } from 'lucide-react';
+import { Code2, Database, BarChart3, PencilLine, Eye } from 'lucide-react';
 
 const SkillsSection = ({ darkMode }) => {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Programming Languages",
       icon: <Code2 className="w-6 h-6" />,
-      skills: ["React", "JavaScript", "TypeScript", "CSS"]
+      skills: [ "JavaScript", "TypeScript", "Python", "SQL"]
     },
     {
-      title: "Backend Development",
+      title: "Databases & Cloud",
       icon: <Database className="w-6 h-6" />,
-      skills: ["Node.js", "Python", "SQL"]
+      skills: ["PostgreSQL", "Supabase", "Amazon S3"]
     },
     {
-      title: "Other Skills",
+      title: "Frameworks & Tools",
       icon: <BarChart3 className="w-6 h-6" />,
-      skills: ["Data Analysis", "Problem Solving", "API Design"]
-    }
+      skills: [ "React", "Node.js", "Express", "Next.js", "Prisma", "Knex.js", "Tailwind CSS"]
+    },
+    {
+      title: "Data & Analytics",
+      icon: <Eye className="w-6 h-6" />,
+      skills: ["dbt", "FiveTran", "Snowake", "REST APIs"]
+    },
+    {
+      title: "Development Tools",
+      icon: <PencilLine className="w-6 h-6" />,
+      skills: ["Git", "Figma"]
+    },
   ];
 
   return (
@@ -64,8 +74,8 @@ const SkillsSection = ({ darkMode }) => {
                     transition={{ delay: (categoryIndex * 0.2) + (skillIndex * 0.1) }}
                     className={`p-3 rounded ${
                       darkMode 
-                        ? 'bg-gray-700 hover:bg-gray-600' 
-                        : 'bg-gray-100 hover:bg-gray-200'
+                        ? 'bg-black-700 hover:bg-black-600' 
+                        : 'bg-blue-100 hover:bg-gray-200'
                     } transition-colors duration-200`}
                   >
                     <span className="text-sm font-medium">{skill}</span>

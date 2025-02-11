@@ -131,7 +131,7 @@ const Portfolio = () => {
               className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
             >
-              Trust The Process
+              Jah's Journey
             </motion.span>
             <div className="flex items-center space-x-6">
               <button
@@ -142,10 +142,12 @@ const Portfolio = () => {
               </button>
               <a href="#projects" className="hover:text-blue-500 transition-colors font-medium">Projects</a>
               <a href="#contact" className="hover:text-blue-500 transition-colors font-medium">Contact</a>
+              <a href="/Res/_WadeJahshiek resume .docx.pdf" download="Jahshiek_Wade_Resume.pdf" className="hover:text-blue-500 transition-colors font-medium">Download My Resume</a>
             </div>
           </div>
         </div>
       </nav>
+
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 pt-16">
@@ -158,7 +160,7 @@ const Portfolio = () => {
             animate={{ y: 0, opacity: 1 }}
             className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
-            Software Engineer
+            Software Engineer <br/> <small>This portfolio is currently on Version: 2</small>
           </motion.h1>
           <motion.p 
             initial={{ y: -20, opacity: 0 }}

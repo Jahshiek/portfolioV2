@@ -134,7 +134,7 @@ const ProjectsPage = () => {
     {
         title: "Lonely together",
         description: "An online platform developed with  Next.js, TypeScript, Prisma, AWS S3, and Supabase to connect individuals through community events and shared interests.",
-        image: "/public/assets/lonely.jpg",
+        image: "public/assets/lonely.jpg",
         tags: ["Next.js",
           "TypeScript",
           "Prisma",
@@ -183,7 +183,7 @@ const ProjectsPage = () => {
     {
       title: "Blog api with caching and user auth",
       description: "it is just to explore caching deeper",
-      image: "/src/assets/comingsoon.jpg",
+      image: "portfolio/public/assets/comingsoon.jpg",
       tags: ['flask', 'python', 'redis'],
       status: "In Development "
     },

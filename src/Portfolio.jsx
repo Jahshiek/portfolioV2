@@ -77,7 +77,7 @@ const Portfolio = () => {
         <nav className="flex justify-between items-center mb-16">
           <div className="text-2xl font-bold flex items-center gap-2">
             <Code className="text-blue-400" />
-            <span>DevPortfolio</span>
+            Link<span>DevPortfolio</span>
           </div>
           <div className="flex gap-6">
             {/* <Github className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors" />
@@ -86,10 +86,10 @@ const Portfolio = () => {
             <button className="button">
               <a
                 className="button"
-                href="/public/Res/Jah_Resume.pdf"
-                download
+                href="https://docs.google.com/document/d/1AQ5jsXpmlO5ikNDbBdJrMljEDG1eBqlQQIaKnOOOpAo/edit?tab=t.0"
+                
               >
-                Download Resume
+                View Resume
               </a>
             </button>
           </div>

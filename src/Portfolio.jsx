@@ -1,19 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { Code, Sparkles, Monitor, Github, Mail, Linkedin, Contact, User } from 'lucide-react';
-import {Link} from "react-router-dom";
-
-
-
+import React, { useState, useEffect } from "react";
+import {
+  Code,
+  Sparkles,
+  Monitor,
+  Github,
+  Mail,
+  Linkedin,
+  Contact,
+  User,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
-  const [currentText, setCurrentText] = useState('');
-  
+  const [currentText, setCurrentText] = useState("");
+
   const phrases = [
     "I Just Though this was a cool feature",
     "I'm tired of this grandpa, well THATS TOO DAMN BAD, ",
-    "If I had a nickel for every meme I quoted on a daily basis, I'd have two nickels. Which isn't a lot but it's weird that it's happened twice."
+    "If I had a nickel for every meme I quoted on a daily basis, I'd have two nickels. Which isn't a lot but it's weird that it's happened twice.",
   ];
 
   useEffect(() => {
@@ -21,14 +27,14 @@ const Portfolio = () => {
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
-    
+
     const typeWriter = () => {
       const currentPhrase = phrases[currentPhraseIndex];
-      
+
       if (!isDeleting) {
         setCurrentText(currentPhrase.substring(0, currentCharIndex + 1));
         currentCharIndex++;
-        
+
         if (currentCharIndex === currentPhrase.length) {
           isDeleting = true;
           setTimeout(typeWriter, 2000);
@@ -37,16 +43,16 @@ const Portfolio = () => {
       } else {
         setCurrentText(currentPhrase.substring(0, currentCharIndex - 1));
         currentCharIndex--;
-        
+
         if (currentCharIndex === 0) {
           isDeleting = false;
           currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
         }
       }
-      
+
       setTimeout(typeWriter, isDeleting ? 50 : 100);
     };
-    
+
     typeWriter();
   }, []);
 
@@ -59,21 +65,33 @@ const Portfolio = () => {
   };
 
   return (
-    
-    <div 
+    <div
       className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-8"
       onMouseMove={handleMouseMove}
     >
-      <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div
+        className={`transition-opacity duration-1000 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <nav className="flex justify-between items-center mb-16">
           <div className="text-2xl font-bold flex items-center gap-2">
             <Code className="text-blue-400" />
             <span>DevPortfolio</span>
           </div>
           <div className="flex gap-6">
-            <Github className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors" />
+            {/* <Github className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors" />
             <Mail className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors" />
-            <Linkedin className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors" />
+            <Linkedin className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors" /> */}
+            <button className="button">
+              <a
+                className="button"
+                href="/public/Res/Jah_Resume.pdf"
+                download
+              >
+                Download Resume
+              </a>
+            </button>
           </div>
         </nav>
 
@@ -90,55 +108,67 @@ const Portfolio = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-          <Link to="/ProjectsPage">
-            <div 
-              className="p-6 rounded-lg bg-gray-800 transform hover:scale-105 transition-transform cursor-pointer"
-              style={{
-                transform: `perspective(1000px) rotateX(${(mousePosition.y - 0.5) * 10}deg) rotateY(${(mousePosition.x - 0.5) * 10}deg)`
-              }}
-            >
-              <Monitor className="text-blue-400 mb-4 w-8 h-8" />
-              <h3 className="text-xl font-bold mb-2">Featured Projects</h3>
-              <p className="text-gray-400">Explore my latest work and technical experiments</p>
-            </div>
+            <Link to="/ProjectsPage">
+              <div
+                className="p-6 rounded-lg bg-gray-800 transform hover:scale-105 transition-transform cursor-pointer"
+                style={{
+                  transform: `perspective(1000px) rotateX(${
+                    (mousePosition.y - 0.5) * 10
+                  }deg) rotateY(${(mousePosition.x - 0.5) * 10}deg)`,
+                }}
+              >
+                <Monitor className="text-blue-400 mb-4 w-8 h-8" />
+                <h3 className="text-xl font-bold mb-2">Featured Projects</h3>
+                <p className="text-gray-400">
+                  Explore my latest work and technical experiments
+                </p>
+              </div>
             </Link>
             <Link to="/TechStackPage">
-            <div 
-              className="p-6 rounded-lg bg-gray-800 transform hover:scale-105 transition-transform cursor-pointer"
-              style={{
-                transform: `perspective(1000px) rotateX(${(mousePosition.y - 0.5) * 10}deg) rotateY(${(mousePosition.x - 0.5) * 10}deg)`
-              }}
-            >
-              <Sparkles className="text-blue-400 mb-4 w-8 h-8" />
-              <h3 className="text-xl font-bold mb-2">Tech Stack</h3>
-              <p className="text-gray-400">Modern tools and technologies I work with</p>
-            </div>
+              <div
+                className="p-6 rounded-lg bg-gray-800 transform hover:scale-105 transition-transform cursor-pointer"
+                style={{
+                  transform: `perspective(1000px) rotateX(${
+                    (mousePosition.y - 0.5) * 10
+                  }deg) rotateY(${(mousePosition.x - 0.5) * 10}deg)`,
+                }}
+              >
+                <Sparkles className="text-blue-400 mb-4 w-8 h-8" />
+                <h3 className="text-xl font-bold mb-2">Tech Stack</h3>
+                <p className="text-gray-400">
+                  Modern tools and technologies I work with
+                </p>
+              </div>
             </Link>
-{/* ////////////////////// */}
+            {/* ////////////////////// */}
             <Link to="/AboutPage">
-            <div 
-              className="p-6 rounded-lg bg-gray-800 transform hover:scale-105 transition-transform cursor-pointer"
-              style={{
-                transform: `perspective(1000px) rotateX(${(mousePosition.y - 0.5) * 10}deg) rotateY(${(mousePosition.x - 0.5) * 10}deg)`
-              }}
-            >
-              <Contact className="text-blue-400 mb-4 w-8 h-8" />
-              <h3 className="text-xl font-bold mb-2">About Me</h3>
-              <p className="text-gray-400">Learn a little more about me</p>
-            </div>
+              <div
+                className="p-6 rounded-lg bg-gray-800 transform hover:scale-105 transition-transform cursor-pointer"
+                style={{
+                  transform: `perspective(1000px) rotateX(${
+                    (mousePosition.y - 0.5) * 10
+                  }deg) rotateY(${(mousePosition.x - 0.5) * 10}deg)`,
+                }}
+              >
+                <Contact className="text-blue-400 mb-4 w-8 h-8" />
+                <h3 className="text-xl font-bold mb-2">About Me</h3>
+                <p className="text-gray-400">Learn a little more about me</p>
+              </div>
             </Link>
-{/* ////////////////////// */}
+            {/* ////////////////////// */}
             <Link to="/ContactPage">
-            <div 
-              className="p-6 rounded-lg bg-gray-800 transform hover:scale-105 transition-transform cursor-pointer"
-              style={{
-                transform: `perspective(1000px) rotateX(${(mousePosition.y - 0.5) * 10}deg) rotateY(${(mousePosition.x - 0.5) * 10}deg)`
-              }}
-            >
-              <User className="text-blue-400 mb-4 w-8 h-8" />
-              <h3 className="text-xl font-bold mb-2">Contact Section</h3>
-              <p className="text-gray-400">Contact me</p>
-            </div>
+              <div
+                className="p-6 rounded-lg bg-gray-800 transform hover:scale-105 transition-transform cursor-pointer"
+                style={{
+                  transform: `perspective(1000px) rotateX(${
+                    (mousePosition.y - 0.5) * 10
+                  }deg) rotateY(${(mousePosition.x - 0.5) * 10}deg)`,
+                }}
+              >
+                <User className="text-blue-400 mb-4 w-8 h-8" />
+                <h3 className="text-xl font-bold mb-2">Contact Section</h3>
+                <p className="text-gray-400">Contact me</p>
+              </div>
             </Link>
           </div>
         </main>
@@ -263,8 +293,8 @@ export default Portfolio;
 //     }
 //   ];
 
-//   const filteredProjects = activeFilter === 'all' 
-//     ? projects 
+//   const filteredProjects = activeFilter === 'all'
+//     ? projects
 //     : projects.filter(project => project.category === activeFilter);
 
 //   const openProjectModal = (project) => setSelectedProject(project);
@@ -276,7 +306,7 @@ export default Portfolio;
 //       <nav className="fixed w-full z-50 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
 //         <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
 //           <div className="flex justify-between h-16 items-center">
-//             <motion.span 
+//             <motion.span
 //               className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
 //               whileHover={{ scale: 1.05 }}
 //             >
@@ -297,37 +327,36 @@ export default Portfolio;
 //         </div>
 //       </nav>
 
-
 //       {/* Hero Section */}
 //       <section className="relative min-h-screen flex items-center justify-center px-4 pt-16">
 //         <div className="absolute inset-0">
 //           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 backdrop-blur-xl"/>
 //         </div>
 //         <div className="relative max-w-4xl mx-auto text-center">
-//           <motion.h1 
+//           <motion.h1
 //             initial={{ y: -20, opacity: 0 }}
 //             animate={{ y: 0, opacity: 1 }}
 //             className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
 //           >
 //             Software Engineer <br/> <small>This portfolio is currently on Version: 2</small>
 //           </motion.h1>
-//           <motion.p 
+//           <motion.p
 //             initial={{ y: -20, opacity: 0 }}
 //             animate={{ y: 0, opacity: 1 }}
 //             transition={{ delay: 0.2 }}
 //             className="text-xl mb-8 leading-relaxed"
 //           >
-//             I'm a software engineer from Queens with a strong foundation in web development and data analytics. 
-//             As a graduate of The Marcy Lab's intensive software engineering program, I have experience building 
+//             I'm a software engineer from Queens with a strong foundation in web development and data analytics.
+//             As a graduate of The Marcy Lab's intensive software engineering program, I have experience building
 //             full-stack applications, automating data processes, and creating user-focused solutions.
 //           </motion.p>
-//           <motion.div 
+//           <motion.div
 //             initial={{ y: -20, opacity: 0 }}
 //             animate={{ y: 0, opacity: 1 }}
 //             transition={{ delay: 0.4 }}
 //             className="flex justify-center space-x-4"
 //           >
-//             <motion.a 
+//             <motion.a
 //               whileHover={{ scale: 1.05 }}
 //               whileTap={{ scale: 0.95 }}
 //               className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium shadow-lg hover:bg-blue-700 transition-colors"
@@ -335,7 +364,7 @@ export default Portfolio;
 //             >
 //               View Projects
 //             </motion.a>
-//             <motion.a 
+//             <motion.a
 //               whileHover={{ scale: 1.05 }}
 //               whileTap={{ scale: 0.95 }}
 //               className={`border-2 px-8 py-3 rounded-full font-medium ${
@@ -352,7 +381,7 @@ export default Portfolio;
 //       {/* Projects Section */}
 //       <section id="projects" className="py-20 px-4">
 //         <div className="max-w-7xl mx-auto">
-//           <motion.h2 
+//           <motion.h2
 //             initial={{ opacity: 0 }}
 //             whileInView={{ opacity: 1 }}
 //             viewport={{ once: true }}
@@ -370,8 +399,8 @@ export default Portfolio;
 //                 whileTap={{ scale: 0.95 }}
 //                 onClick={() => setActiveFilter(id)}
 //                 className={`flex items-center space-x-2 px-6 py-2 rounded-full ${
-//                   activeFilter === id 
-//                     ? 'bg-blue-600 text-white' 
+//                   activeFilter === id
+//                     ? 'bg-blue-600 text-white'
 //                     : `${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'}`
 //                 } transition-colors`}
 //               >
@@ -382,13 +411,13 @@ export default Portfolio;
 //           </div>
 
 //           {/* Projects Grid */}
-//           <motion.div 
+//           <motion.div
 //             layout
 //             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 //           >
 //             <AnimatePresence>
 //               {filteredProjects.map((project) => (
-//                 <ProjectCard 
+//                 <ProjectCard
 //                   key={project.id}
 //                   project={project}
 //                   darkMode={darkMode}
@@ -401,7 +430,7 @@ export default Portfolio;
 //       </section>
 
 //       {/* Project Modal */}
-//       <ProjectModal 
+//       <ProjectModal
 //         project={selectedProject}
 //         darkMode={darkMode}
 //         onClose={closeProjectModal}
@@ -437,23 +466,23 @@ export default Portfolio;
 //       onClick={onClick}
 //     >
 //       <div className="relative group">
-//         <img 
-//           src={project.image} 
+//         <img
+//           src={project.image}
 //           alt={project.title}
 //           className="w-full h-48 object-cover"
 //         />
 //         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-4">
 //           <div className="flex space-x-2">
-//             <a 
-//               href={project.links.github} 
+//             <a
+//               href={project.links.github}
 //               className="text-white hover:text-blue-400 transition-colors"
 //               onClick={e => e.stopPropagation()}
 //             >
 //               <GithubIcon size={20} />
 //             </a>
 //             {project.links.live && (
-//               <a 
-//                 href={project.links.live} 
+//               <a
+//                 href={project.links.live}
 //                 className="text-white hover:text-blue-400 transition-colors"
 //                 onClick={e => e.stopPropagation()}
 //               >
@@ -468,11 +497,11 @@ export default Portfolio;
 //         <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{project.description}</p>
 //         <div className="flex flex-wrap gap-2">
 //           {project.tags.map((tag) => (
-//             <span 
-//               key={tag} 
+//             <span
+//               key={tag}
 //               className={`text-sm px-3 py-1 rounded-full ${
-//                 darkMode 
-//                   ? 'bg-gray-700 text-gray-300' 
+//                 darkMode
+//                   ? 'bg-gray-700 text-gray-300'
 //                   : 'bg-blue-100 text-blue-800'
 //               }`}
 //             >
@@ -520,7 +549,7 @@ export default Portfolio;
 
 //   return (
 //     <div className="max-w-4xl mx-auto text-center">
-//       <motion.h2 
+//       <motion.h2
 //         initial={{ opacity: 0 }}
 //         whileInView={{ opacity: 1 }}
 //         viewport={{ once: true }}

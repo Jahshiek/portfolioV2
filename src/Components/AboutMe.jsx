@@ -110,7 +110,7 @@ const AboutPage = () => {
               <div className="relative w-64 h-64 mx-auto mb-8">
                 <div className="absolute inset-0 bg-blue-500 rounded-full opacity-10 animate-pulse"></div>
                 <img
-                  src="public/assets/jah.png"
+                  src="/assets/pic.png"
                   alt="Profile"
                   className="rounded-full w-full h-full object-cover"
                 />

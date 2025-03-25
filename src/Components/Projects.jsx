@@ -121,7 +121,7 @@ const ProjectsPage = () => {
     {
       title: "Packet Patrol",
       description: "A functional IDS built to expand my skill set in cybersecurity, Python, and full-stack development.",
-      image: "/src/assets/ids-protection.png",
+      image: "/assets/ids-protection.png",
       tags: ["Python",
         "Scapy",
         "Pandas",
@@ -134,7 +134,7 @@ const ProjectsPage = () => {
     {
         title: "Lonely together",
         description: "An online platform developed with  Next.js, TypeScript, Prisma, AWS S3, and Supabase to connect individuals through community events and shared interests.",
-        image: "public/assets/lonely.jpg",
+        image: "/assets/lonely.jpg",
         tags: ["Next.js",
           "TypeScript",
           "Prisma",
@@ -148,7 +148,7 @@ const ProjectsPage = () => {
     {
         title: "Second Wind",
         description: "Smart task management system with natural language processing and automated prioritization. Features include task categorization, priority inference, and deadline management.",
-        image: "src/assets/prison.jpg",
+        image: "/assets/prison.jpg",
         tags: ['react', 'Node', 'Websocket', 'Express'],
         github: "https://github.com/Jahshiek/Second_Wind-",
         demo: "#"
@@ -156,7 +156,7 @@ const ProjectsPage = () => {
     {
         title: "Weather api with Caching",
         description: "Smart task management system with natural language processing and automated prioritization. Features include task categorization, priority inference, and deadline management.",
-        image: "src/assets/weather-api.jpg",
+        image: "/assets/weather-api.jpg",
         tags: ['Flask', 'Redis', 'Python'],
         github: "https://github.com/Jahshiek/weatherApi-cache",
         demo: "#"
@@ -164,7 +164,7 @@ const ProjectsPage = () => {
     {
         title: "Gov-watchers",
         description: "An in-depth analysis that examines the cost of living and purchasing power in relation to inflation, the Consumer Price Index (CPI), and the valuation of the U.S. dollar, all set against the backdrop of median household income and minimum wage.",
-        image: "/src/assets/gov-watchers.jpg",
+        image: "/assets/gov-watchers.jpg",
         tags: ['react', 'typescript', 'python'],
         github: "https://github.com/GOV-watchers/g-WATCH",
         demo: "#"
@@ -183,7 +183,7 @@ const ProjectsPage = () => {
     {
       title: "Blog api with caching and user auth",
       description: "it is just to explore caching deeper",
-      image: "portfolio/public/assets/comingsoon.jpg",
+      image: "/assets/comingsoon.jpg",
       tags: ['flask', 'python', 'redis'],
       status: "In Development "
     },

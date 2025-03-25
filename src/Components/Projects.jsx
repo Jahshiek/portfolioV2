@@ -172,7 +172,7 @@ const ProjectsPage = () => {
     {
       title: "Fight-For-Ethan",
       description: "A Mortal Kombat clone created using HTML, CSS, and Vanilla JavaScript.",
-      image: "/src/assets/file.png",
+      image: "/assets/file.png",
       tags: ['html5', 'javascript', 'css'],
       github: "https://github.com/ELJGaming/Project-Week-Fighting-Game-2.0",
       demo: "https://eljgaming.github.io/Project-Week-Fighting-Game-2.0/"

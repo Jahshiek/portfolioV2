@@ -6,7 +6,7 @@ const ProjectModal = ({ project, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-    "/src/assets/Season3ShowGIFbyNanalan-ezgif.com-resize (1).gif",
+    "/assets/Season3ShowGIFbyNanalan-ezgif.com-resize (1).gif",
     "/api/placeholder/800/400",
     "/api/placeholder/800/400"
   ];

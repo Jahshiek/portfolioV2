@@ -165,7 +165,7 @@ const ProjectsPage = () => {
         title: "Gov-watchers",
         description: "An in-depth analysis that examines the cost of living and purchasing power in relation to inflation, the Consumer Price Index (CPI), and the valuation of the U.S. dollar, all set against the backdrop of median household income and minimum wage.",
         image: "/assets/gov-watchers.jpg",
-        tags: ['react', 'typescript', 'python'],
+        tags: ['Dbt', 'Fivetran', 'SQL', 'Snowflake'],
         github: "https://github.com/GOV-watchers/g-WATCH",
         demo: "#"
     },

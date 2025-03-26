@@ -19,7 +19,13 @@ const Portfolio = () => {
   const phrases = [
     "I Just Though this was a cool feature",
     "I'm tired of this grandpa, well THATS TOO DAMN BAD, ",
-    "If I had a nickel for every meme I quoted on a daily basis, I'd have two nickels. Which isn't a lot but it's weird that it's happened twice.",
+    "If I had a nickel for every meme I quoted on a daily basis, I'd have 7 nickels.",
+    "It ain't much, but it's honest work.",
+    "Why do I hear boss music?",
+    "This is where the fun begins.",
+    "Somebody once told me…",
+    "I never have bugs, only features.",
+    "I understood that reference!"
   ];
 
   useEffect(() => {

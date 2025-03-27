@@ -33,14 +33,14 @@ const Portfolio = () => {
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
-
+'sksjksjks'
     const typeWriter = () => {
       const currentPhrase = phrases[currentPhraseIndex];
 
       if (!isDeleting) {
         setCurrentText(currentPhrase.substring(0, currentCharIndex + 1));
         currentCharIndex++;
-
+        
         if (currentCharIndex === currentPhrase.length) {
           isDeleting = true;
           setTimeout(typeWriter, 2000);

@@ -115,7 +115,13 @@ const ProjectsPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const tags = ['all', 'react', 'typescript', 'python'];
+  const tags = ['all', 'Fullstack', 'Cyber', "Frontend", 'Backend', 'Data'];
+
+  const F= tags[1]
+  const C = tags[2]
+  const Fr= tags[3]
+  const B = tags[4]
+  const D = tags[5]
   
   const completedProjects = [
     {
@@ -127,7 +133,7 @@ const ProjectsPage = () => {
         "Pandas",
         "Numpy",
         "Matplotlib",
-        "Seaborn"],
+        "Seaborn", C],
       github: "https://github.com/Jahshiek/Packet-Patrol",
       // demo: "#"
     },
@@ -140,7 +146,7 @@ const ProjectsPage = () => {
           "Prisma",
           "Redux",
           "Supabase",
-          "Aws S3"],
+          "Aws S3", F],
         github: "https://github.com/Jahshiek/Lonely-Together",
         demo: "#"
     },
@@ -149,7 +155,7 @@ const ProjectsPage = () => {
         title: "Second Wind",
         description: "Smart task management system with natural language processing and automated prioritization. Features include task categorization, priority inference, and deadline management.",
         image: "/assets/prison.jpg",
-        tags: ['react', 'Node', 'Websocket', 'Express'],
+        tags: ['react', 'Node', 'Websocket', 'Express', F],
         github: "https://github.com/Jahshiek/Second_Wind-",
         demo: "#"
     },
@@ -157,7 +163,7 @@ const ProjectsPage = () => {
         title: "Weather api with Caching",
         description: "Smart task management system with natural language processing and automated prioritization. Features include task categorization, priority inference, and deadline management.",
         image: "/assets/weather-api.jpg",
-        tags: ['Flask', 'Redis', 'Python'],
+        tags: ['Flask', 'Redis', 'Python', B],
         github: "https://github.com/Jahshiek/weatherApi-cache",
         demo: "#"
     },
@@ -165,7 +171,7 @@ const ProjectsPage = () => {
         title: "Gov-watchers",
         description: "An in-depth analysis that examines the cost of living and purchasing power in relation to inflation, the Consumer Price Index (CPI), and the valuation of the U.S. dollar, all set against the backdrop of median household income and minimum wage.",
         image: "/assets/gov-watchers.jpg",
-        tags: ['Dbt', 'Fivetran', 'SQL', 'Snowflake'],
+        tags: ['Dbt', 'Fivetran', 'SQL', 'Snowflake', D],
         github: "https://github.com/GOV-watchers/g-WATCH",
         demo: "#"
     },
@@ -173,7 +179,7 @@ const ProjectsPage = () => {
       title: "Fight-For-Ethan",
       description: "A Mortal Kombat clone created using HTML, CSS, and Vanilla JavaScript.",
       image: "/assets/file.png",
-      tags: ['html5', 'javascript', 'css'],
+      tags: ['html5', 'javascript', 'css', Fr],
       github: "https://github.com/ELJGaming/Project-Week-Fighting-Game-2.0",
       demo: "https://eljgaming.github.io/Project-Week-Fighting-Game-2.0/"
     }
@@ -184,7 +190,7 @@ const ProjectsPage = () => {
       title: "Blog api with caching and user auth",
       description: "it is just to explore caching deeper",
       image: "/assets/comingsoon.jpg",
-      tags: ['flask', 'python', 'redis'],
+      tags: ['flask', 'python', 'redis', B],
       status: "In Development "
     },
 
